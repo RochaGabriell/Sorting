@@ -24,12 +24,12 @@ class BubbleSort:
 
                 title = st.title(f"{list(self.lista[i].keys())} > {list(self.lista[i + 1].keys())} = {list(self.lista[i].keys()) > list(self.lista[i + 1].keys())}", anchor=None)            
 
-                time.sleep(self.velocity)
+                time.sleep(self.velocity) # Controla o tempo de uma execução pra outra
 
-                title.empty()
-                graphic.empty()
+                title.empty() # Limpe os elementos do título
+                graphic.empty() # Limpe os elementos do gráfico
                 
-                if list(self.lista[i].keys()) > list(self.lista[i + 1].keys()):
+                if list(self.lista[i].keys()) > list(self.lista[i + 1].keys()): # Pegando apenas a key do dict, para fazer a comparação
 
                     troca = True
                     self.lista[i], self.lista[i + 1] = self.lista[i + 1], self.lista[i]       
@@ -68,5 +68,5 @@ def bubblesort(lista = lista):
         if not troca:
             return
         '''
-
+        # Exiba um bloco de código com a sintaxe do Python
         st.code(code, language='python')
